@@ -105,6 +105,13 @@ var _ = {};
 
   // Return the results of applying an iterator to each element.
   _.map = function(array, iterator) {
+    var output = []
+
+    for (var index in array){
+      output.push( iterator(array[index]) );
+    }
+
+    return output;
   };
 
   /*
