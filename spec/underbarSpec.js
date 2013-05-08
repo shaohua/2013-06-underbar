@@ -139,23 +139,23 @@ var returnArguments = function(){ return arguments; };
 //   });
 // });
 
-describe("map", function() {
-  it("should apply a function to every value in an array", function() {
-    var doubled = _.map([1, 2, 3], function(num) { return num * 2; });
-    expect(doubled).to.eql([2, 4, 6]);
-  });
-});
-/*
-describe("pluck", function() {
-  it("should return values contained at a user-defined property", function() {
-    var people = [
-      {name : 'moe', age : 30},
-      {name : 'curly', age : 50}
-    ];
+// describe("map", function() {
+//   it("should apply a function to every value in an array", function() {
+//     var doubled = _.map([1, 2, 3], function(num) { return num * 2; });
+//     expect(doubled).to.eql([2, 4, 6]);
+//   });
+// });
 
-    expect(_.pluck(people, 'name')).to.eql(['moe', 'curly']);
-  });
-});
+// describe("pluck", function() {
+//   it("should return values contained at a user-defined property", function() {
+//     var people = [
+//       {name : 'moe', age : 30},
+//       {name : 'curly', age : 50}
+//     ];
+
+//     expect(_.pluck(people, 'name')).to.eql(['moe', 'curly']);
+//   });
+// });
 
 describe("invoke", function() {
   it("should sort the first array", function() {
@@ -184,7 +184,7 @@ describe("invoke with function reference", function() {
     expect(result[1]).to.eql([1, 2, 3]);
   });
 });
-
+/*
 describe("reduce", function() {
   it("should be able to sum up an array", function() {
     var callback = function(sum, num) {return sum + num; };
