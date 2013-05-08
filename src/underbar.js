@@ -24,7 +24,13 @@ var _ = {};
   // Like last, but for the first elements
   _.first = function(array, n) {
     // TIP: you can often re-use similar functions in clever ways, like so:
-    return _.last(array.reverse(), n);
+    var array = Array.prototype.slice.call(array);
+
+    if(typeof n === 'undefined'){
+      return _.last(array.reverse(), n);
+    } else {
+      return ( _.last(array.reverse(), n) ).reverse();
+    }
   };
 
 

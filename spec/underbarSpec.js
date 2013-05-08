@@ -1,30 +1,30 @@
 var returnArguments = function(){ return arguments; };
 
-describe("last", function() {
-  it("should pull the last element from an array", function() {
-    expect(_.last([1,2,3])).to.equal(3);
-  });
+// describe("last", function() {
+//   it("should pull the last element from an array", function() {
+//     expect(_.last([1,2,3])).to.equal(3);
+//   });
 
-  it("should accept an index argument", function() {
-    expect(_.last([1,2,3], 2)).to.eql([2, 3]);
-  });
+//   it("should accept an index argument", function() {
+//     expect(_.last([1,2,3], 2)).to.eql([2, 3]);
+//   });
 
-  it("should return nothing if zero is passed in as the index", function() {
-    expect(_.last([1,2,3], 0)).to.eql([]);
-  });
+//   it("should return nothing if zero is passed in as the index", function() {
+//     expect(_.last([1,2,3], 0)).to.eql([]);
+//   });
 
-  it("should return all the array's elements if the index argument is larger than the length of the array", function() {
-    expect(_.last([1,2,3], 5)).to.eql([1, 2, 3]);
-  });
+//   it("should return all the array's elements if the index argument is larger than the length of the array", function() {
+//     expect(_.last([1,2,3], 5)).to.eql([1, 2, 3]);
+//   });
 
-  it("should work on an arguments object", function() {
-    var args = returnArguments(1, 2, 3, 4);
-    expect(_.last(args, 2)).to.eql([3, 4]);
-  });
+//   it("should work on an arguments object", function() {
+//     var args = returnArguments(1, 2, 3, 4);
+//     expect(_.last(args, 2)).to.eql([3, 4]);
+//   });
 
-});
+// });
 
-/*
+
 
 describe("first", function() {
   it("should be able to pull out the first element of an array", function() {
@@ -60,7 +60,7 @@ describe("each", function() {
     ]);
   });
 });
-
+/*
 describe("indexOf", function() {
 
   it("should be able to compute indexOf even when the native function is undefined", function() {
