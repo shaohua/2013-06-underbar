@@ -58,7 +58,7 @@ var _ = {};
       }
     });
 
-    return result;
+    return Math.floor(result);
   };
 
   // Return all elements of an array that pass a truth test.
