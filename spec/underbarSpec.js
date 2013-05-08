@@ -107,20 +107,20 @@ var returnArguments = function(){ return arguments; };
 //     expect(odds).to.eql([1, 3, 5]);
 //   });
 // });
-describe("reject", function() {
-  it("should reject all even numbers", function() {
-    var isEven = function(num) { return num % 2 === 0; };
-    var odds = _.reject([1, 2, 3, 4, 5, 6], isEven);
-    expect(odds).to.eql([1, 3, 5]);
-  });
+// describe("reject", function() {
+//   it("should reject all even numbers", function() {
+//     var isEven = function(num) { return num % 2 === 0; };
+//     var odds = _.reject([1, 2, 3, 4, 5, 6], isEven);
+//     expect(odds).to.eql([1, 3, 5]);
+//   });
 
-  it("should reject all odd numbers", function() {
-    var isOdd = function(num) { return num % 2 !== 0; };
-    var evens = _.reject([1, 2, 3, 4, 5, 6], isOdd);
-    expect(evens).to.eql([2, 4, 6]);
-  });
-});
-/*
+//   it("should reject all odd numbers", function() {
+//     var isOdd = function(num) { return num % 2 !== 0; };
+//     var evens = _.reject([1, 2, 3, 4, 5, 6], isOdd);
+//     expect(evens).to.eql([2, 4, 6]);
+//   });
+// });
+
 describe("uniq", function() {
   it("should return all unique values contained in an unsorted array", function() {
     var list = [1, 2, 1, 3, 1, 4];
@@ -138,7 +138,7 @@ describe("uniq", function() {
     expect(_.uniq(args)).to.eql([1, 2, 3, 4]);
   });
 });
-
+/*
 describe("map", function() {
   it("should apply a function to every value in an array", function() {
     var doubled = _.map([1, 2, 3], function(num) { return num * 2; });

@@ -84,6 +84,16 @@ var _ = {};
 
   // Produce a duplicate-free version of the array.
   _.uniq = function(array) {
+    var array = Array.prototype.slice.call(array);
+    var output = [];
+
+    for (var index in array){
+      if(_.indexOf(output, array[index])===-1){
+        output.push(array[index]);
+      }
+    }
+
+    return output;
   };
 
 
