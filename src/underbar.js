@@ -36,6 +36,9 @@ var _ = {};
 
   // Call iterator(value, key, collection) for each element of collection
   _.each = function(obj, iterator) {
+    for(var key in obj){
+      iterator(obj[key], key, obj);
+    }
   };
 
   /*
