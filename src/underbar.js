@@ -5,6 +5,20 @@ var _ = {};
   // Return an array of the last n elements of an array. If n is undefined,
   // return just the last element.
   _.last = function(array, n) {
+
+    var array = Array.prototype.slice.call(array);
+
+    if(typeof n === 'undefined'){
+      return array[array.length-1];
+    } else if (n>0 && n<=array.length){
+      return array.slice(array.length-n, array.length);
+    } else if (n===0){
+      return [];
+    } else if (n>array.length){
+      return array;
+    } else{
+      return;
+    }
   };
 
   // Like last, but for the first elements
