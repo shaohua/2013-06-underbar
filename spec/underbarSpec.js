@@ -61,35 +61,35 @@ var returnArguments = function(){ return arguments; };
 //   });
 // });
 
-describe("indexOf", function() {
+// describe("indexOf", function() {
 
-  it("should be able to compute indexOf even when the native function is undefined", function() {
-    var numbers = [1, 2, 3];
-    numbers.indexOf = null;
-    expect(_.indexOf(numbers, 2)).to.be(1);
-  });
+//   it("should be able to compute indexOf even when the native function is undefined", function() {
+//     var numbers = [1, 2, 3];
+//     numbers.indexOf = null;
+//     expect(_.indexOf(numbers, 2)).to.be(1);
+//   });
 
-  it("should work on an arguments object", function() {
-    var args = returnArguments(1,2,3);
-    expect(_.indexOf(args, 2)).to.be(1);
-  });
+//   it("should work on an arguments object", function() {
+//     var args = returnArguments(1,2,3);
+//     expect(_.indexOf(args, 2)).to.be(1);
+//   });
 
-  it("should not have 35 in the list", function() {
-    var numbers = [10, 20, 30, 40, 50];
-    expect(_.indexOf(numbers, 35)).to.be(-1);
-  });
+//   it("should not have 35 in the list", function() {
+//     var numbers = [10, 20, 30, 40, 50];
+//     expect(_.indexOf(numbers, 35)).to.be(-1);
+//   });
 
-  it("should have 40 in the list", function() {
-    var numbers = [10, 20, 30, 40, 50];
-    expect(_.indexOf(numbers, 40)).to.be(3);
-  });
+//   it("should have 40 in the list", function() {
+//     var numbers = [10, 20, 30, 40, 50];
+//     expect(_.indexOf(numbers, 40)).to.be(3);
+//   });
 
-  it("should have 40 in the list even when there are duplicates", function() {
-    var numbers = [1, 40, 40, 40, 40, 40, 40, 40, 50, 60, 70];
-    expect(_.indexOf(numbers, 40)).to.be(1);
-  });
-});
-/*
+//   it("should have 40 in the list even when there are duplicates", function() {
+//     var numbers = [1, 40, 40, 40, 40, 40, 40, 40, 50, 60, 70];
+//     expect(_.indexOf(numbers, 40)).to.be(1);
+//   });
+// });
+
 describe("filter", function() {
   it("should return all even numbers in an array", function() {
     var isEven = function(num) {
@@ -107,7 +107,7 @@ describe("filter", function() {
     expect(odds).to.eql([1, 3, 5]);
   });
 });
-
+/*
 describe("reject", function() {
   it("should reject all even numbers", function() {
     var isEven = function(num) { return num % 2 === 0; };
