@@ -194,6 +194,14 @@ var _ = {};
   // provided, provide a default one
   _.any = function(obj, iterator) {
     // TIP: re-use every() here
+    // todo, not sure how to use every()
+    var defaultFunc = function(item){return item;}
+    var iterator = iterator || defaultFunc;
+    var hasAny = false;
+    for (var index in obj){
+      hasAny = hasAny || !!iterator(obj[index]);
+    }
+    return hasAny;
   };
 
 
