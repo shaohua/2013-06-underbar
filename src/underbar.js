@@ -157,6 +157,12 @@ var _ = {};
   //   }, 0); // should be 6
   //
   _.reduce = function(obj, iterator, initialValue) {
+    var initialValue = initialValue || 0;
+    var previousValue = initialValue;
+    for (var index in obj){
+      previousValue = iterator(previousValue, obj[index]);
+    }
+    return previousValue;
   };
 
   // Determine if the array or object contains a given value (using `===`).

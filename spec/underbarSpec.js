@@ -157,34 +157,34 @@ var returnArguments = function(){ return arguments; };
 //   });
 // });
 
-describe("invoke", function() {
-  it("should sort the first array", function() {
-    var lists = [[5, 1, 7], [3, 2, 1]];
-    var result = _.invoke(lists, 'sort');
-    expect(result[0]).to.eql([1, 5, 7]);
-  });
+// describe("invoke", function() {
+//   it("should sort the first array", function() {
+//     var lists = [[5, 1, 7], [3, 2, 1]];
+//     var result = _.invoke(lists, 'sort');
+//     expect(result[0]).to.eql([1, 5, 7]);
+//   });
 
-  it("should sort the second array", function() {
-    var lists = [[5, 1, 7], [3, 2, 1]];
-    var result = _.invoke(lists, 'sort');
-    expect(result[1]).to.eql([1, 2, 3]);
-  });
-});
+//   it("should sort the second array", function() {
+//     var lists = [[5, 1, 7], [3, 2, 1]];
+//     var result = _.invoke(lists, 'sort');
+//     expect(result[1]).to.eql([1, 2, 3]);
+//   });
+// });
 
-describe("invoke with function reference", function() {
-  it("should sort the first array", function() {
-    var list = [[5, 1, 7], [3, 2, 1]];
-    var result = _.invoke(list, Array.prototype.sort);
-    expect(result[0]).to.eql([1, 5, 7]);
-  });
+// describe("invoke with function reference", function() {
+//   it("should sort the first array", function() {
+//     var list = [[5, 1, 7], [3, 2, 1]];
+//     var result = _.invoke(list, Array.prototype.sort);
+//     expect(result[0]).to.eql([1, 5, 7]);
+//   });
 
-  it("should sort the second array", function() {
-    var list = [[5, 1, 7], [3, 2, 1]];
-    var result = _.invoke(list, Array.prototype.sort);
-    expect(result[1]).to.eql([1, 2, 3]);
-  });
-});
-/*
+//   it("should sort the second array", function() {
+//     var list = [[5, 1, 7], [3, 2, 1]];
+//     var result = _.invoke(list, Array.prototype.sort);
+//     expect(result[1]).to.eql([1, 2, 3]);
+//   });
+// });
+
 describe("reduce", function() {
   it("should be able to sum up an array", function() {
     var callback = function(sum, num) {return sum + num; };
@@ -200,7 +200,7 @@ describe("reduce", function() {
   });
 
 });
-
+/*
 describe("contains", function() {
   it("should return true if a collection contains a user-specified value", function() {
     expect(_.contains([1,2,3], 2)).to.equal(true);
