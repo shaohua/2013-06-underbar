@@ -181,6 +181,13 @@ var _ = {};
   // Determine whether all of the elements match a truth test.
   _.every = function(obj, iterator) {
     // TIP: use reduce on this one!
+    return _.reduce(obj, function(wasTrue, item){
+      if(wasTrue){
+        return wasTrue && !!iterator(item);
+      }
+      return false;
+      // return (typeof iterator(item) !== "undefined") && iterator(item);
+      }, true);
   };
 
   // Determine whether any of the elements pass a truth test. If no iterator is

@@ -185,22 +185,22 @@ var returnArguments = function(){ return arguments; };
 //   });
 // });
 
-describe("reduce", function() {
-  it("should be able to sum up an array", function() {
-    var callback = function(sum, num) {return sum + num; };
-    var sum = _.reduce([1, 2, 3], callback, 0);
-    expect(sum).to.equal(6);
-  });
+// describe("reduce", function() {
+//   it("should be able to sum up an array", function() {
+//     var callback = function(sum, num) {return sum + num; };
+//     var sum = _.reduce([1, 2, 3], callback, 0);
+//     expect(sum).to.equal(6);
+//   });
 
-  it("should be able to sum up an array without being provided an initial value (as long as the array contains at least one element)", function() {
-    var sum = _.reduce([1, 2, 3], function(sum, num) {
-      return sum + num;
-    });
-    expect(sum).to.equal(6);
-  });
+//   it("should be able to sum up an array without being provided an initial value (as long as the array contains at least one element)", function() {
+//     var sum = _.reduce([1, 2, 3], function(sum, num) {
+//       return sum + num;
+//     });
+//     expect(sum).to.equal(6);
+//   });
 
-});
-/*
+// });
+
 describe("contains", function() {
   it("should return true if a collection contains a user-specified value", function() {
     expect(_.contains([1,2,3], 2)).to.equal(true);
@@ -248,7 +248,7 @@ describe("every", function() {
     expect(_.every([undefined, undefined, undefined], getValue)).to.equal(false);
   });
 });
-
+/*
 describe("any", function() {
   var nativeSome = Array.prototype.some;
   var isEven = function(number){
