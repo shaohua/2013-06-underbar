@@ -222,6 +222,19 @@ var _ = {};
   //   }); // obj1 now contains key1, key2, key3 and bla
   //
   _.extend = function(obj) {
+    //obj is the same as args[0]
+    var args = Array.prototype.slice.call(arguments);
+    if(args.length === 1){
+      return obj;
+    }
+    //only deal with more than one arguments
+    for(var i=1;i<args.length;i++){
+      for(var key in args[i]){
+        obj[key] = args[i][key];
+      }
+    }
+
+    return obj;
   };
 
   // Like extend, but doesn't ever overwrite a key that already
