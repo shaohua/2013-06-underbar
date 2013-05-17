@@ -326,6 +326,11 @@ var _ = {};
 
   // Shuffle an array.
   _.shuffle = function(obj) {
+    var result=Array.prototype.slice.call(obj);
+    result.sort(function(){ 
+      return 0.5 - Math.random();
+    });
+    return result;
   };
 
   /* (End of pre-course curriculum) */
