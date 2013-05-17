@@ -289,6 +289,20 @@ var _ = {};
   // already computed the result for the given argument and return that value
   // instead if possible.
   _.memoize = function(func) {
+    var args = Array.prototype.slice(arguments);
+
+    var history={};
+    var result;
+
+    return function(){
+      if( !history.hasOwnProperty(args[1]) ){
+        result = func.apply(this, arguments);
+        history[args[1]] = result;
+        return result;        
+      }else{
+        return history[args[1]]
+      }
+    };
   };
 
   // Delays a function for the given number of milliseconds, and then calls

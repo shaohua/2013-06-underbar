@@ -334,42 +334,42 @@ var returnArguments = function(){ return arguments; };
 //   });
 // });
 
-describe("defaults", function() {
-  var result, options;
+// describe("defaults", function() {
+//   var result, options;
 
-  beforeEach(function() {
-    options = {zero: 0, one: 1, empty: "", nan: NaN, string: "string"};
-    _.defaults(options, {zero: 1, one: 10, twenty: 20}, {empty: "full"}, {nan: "nan"}, {word: "word"}, {word: "dog"});
-  });
+//   beforeEach(function() {
+//     options = {zero: 0, one: 1, empty: "", nan: NaN, string: "string"};
+//     _.defaults(options, {zero: 1, one: 10, twenty: 20}, {empty: "full"}, {nan: "nan"}, {word: "word"}, {word: "dog"});
+//   });
 
-  it("should apply a value when one doesn't already exist on the target", function() {
-    expect(options.zero).to.equal(0);
-    expect(options.one).to.equal(1);
-    expect(options.twenty).to.equal(20);
-  });
+//   it("should apply a value when one doesn't already exist on the target", function() {
+//     expect(options.zero).to.equal(0);
+//     expect(options.one).to.equal(1);
+//     expect(options.twenty).to.equal(20);
+//   });
 
-  it("should not apply a value if one already exist on the target", function() {
-    expect(options.empty).to.equal("");
-    expect(isNaN(options.nan)).to.equal(true);
-  });
+//   it("should not apply a value if one already exist on the target", function() {
+//     expect(options.empty).to.equal("");
+//     expect(isNaN(options.nan)).to.equal(true);
+//   });
 
-  it("if two identical values are passed in, the first one wins", function() {
-    expect(options.word).to.equal("word");
-  });
-});
-/*
-describe("once", function() {
-  it("should only run a user-defined function if it hasn't been run before", function() {
-    var num = 0;
-    var increment = _.once(function() {
-      num++;
-    });
-    increment();
-    increment();
+//   it("if two identical values are passed in, the first one wins", function() {
+//     expect(options.word).to.equal("word");
+//   });
+// });
 
-    expect(num).to.equal(1);
-  });
-});
+// describe("once", function() {
+//   it("should only run a user-defined function if it hasn't been run before", function() {
+//     var num = 0;
+//     var increment = _.once(function() {
+//       num++;
+//     });
+//     increment();
+//     increment();
+
+//     expect(num).to.equal(1);
+//   });
+// });
 
 describe("memoize", function() {
   it("a memoized function should produce the same result when called with the same arguments", function() {
@@ -392,7 +392,7 @@ describe("memoize", function() {
     expect(fastPassThrough('toString')).to.equal('toString');
   });
 });
-
+/*
 describe("delay", function() {
   var clock, delayed, callback;
 
